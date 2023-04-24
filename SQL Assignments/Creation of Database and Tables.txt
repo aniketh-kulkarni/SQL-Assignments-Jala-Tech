@@ -1,0 +1,104 @@
+1. SHOW DATABASES;     #Showing all the databases located in local machine.
++--------------------+
+| Database           |
++--------------------+
+| data1              |
+| information_schema |
+| jaladata           |
+| my_database        |
+| my_db              |
+| mydb               |
+| mydemo2            |
+| mysql              |
+| performance_schema |
+| sakila             |
+| student            |
+| sys                |
+| users              |
+| world              |
++--------------------+
+2. use my_db;            # selected my_db as a database from local databases in a machine.
+Database changed
+
+3. Creating the Customer Table 
+
+ CREATE TABLE Customers (
+    ->   Cnum INT PRIMARY KEY,
+    ->   Cname VARCHAR(50),
+    ->   City VARCHAR(50),
+    ->   Rating INT
+    -> );
+Query OK, 0 rows affected
+
+4. Inserting data into the Customer table
+
+INSERT INTO Customers (Cnum, Cname, City, Rating)
+    -> VALUES
+    ->   (1001, 'Smith', 'London', 150),
+    ->   (1002, 'Johnson', 'New York', 200),
+    ->   (1003, 'Brown', 'Paris', 100),
+    ->   (1004, 'Lee', 'San Jose', 250),
+    ->   (1005, 'Clark', 'New York', 300),
+    ->   (1006, 'Lewis', 'London', 75),
+    ->   (1007, 'Martin', 'Paris', 225),
+    ->   (1008, 'Walker', 'Barcelona', 175),
+    ->   (1009, 'King', 'Rome', 50),
+    ->   (1010, 'Wright', 'Barcelona', 300);
+Query OK, 10 rows affected (0.02 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+5. Creating the Salespeople Table 
+
+CREATE TABLE Salespeople (
+    ->   Snum INT PRIMARY KEY,
+    ->   Sname VARCHAR(50),
+    ->   City VARCHAR(50),
+    ->   Comm DECIMAL(4,2)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+6. Inserting the data into Salespeople Table
+
+INSERT INTO Salespeople (Snum, Sname, City, Comm)
+    -> VALUES
+    ->   (1001, 'Peel', 'London', 0.12),
+    ->   (1002, 'Serres', 'San Francisco', 0.15),
+    ->   (1003, 'Motika', 'London', 0.10),
+    ->   (1004, 'Smith', 'Paris', 0.11),
+    ->   (1005, 'Adams', 'Athens', 0.13),
+    ->   (1006, 'Clark', 'New York', 0.14),
+    ->   (1007, 'Blake', 'Paris', 0.13),
+    ->   (1008, 'Jones', 'San Francisco', 0.12),
+    ->   (1009, 'James', 'London', 0.10),
+    ->   (1010, 'Burns', 'Barcelona', 0.11);
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+7. Creating the Orders table
+
+ CREATE TABLE Orders (
+    ->   Onum INT PRIMARY KEY,
+    ->   Amt DECIMAL(7,2),
+    ->   Odate DATE,
+    ->   Cnum INT,
+    ->   Snum INT,
+    ->   Rating INT
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+8. Inserting the data into the Orders Table
+
+INSERT INTO Orders (Onum, Amt, Odate, Cnum, Snum, Rating)
+    -> VALUES
+    ->   (1001, 5000.00, '1994-10-03', 1001, 1001, 150),
+    ->   (1002, 2500.00, '1994-10-04', 1002, 1002, 200),
+    ->   (1003, 1000.00, '1994-10-01', 1003, 1003, 100),
+    ->   (1004, 2000.00, '1994-10-12', 1004, 1004, 250),
+    ->   (1005, 3200.00, '1994-10-13', 1005, 1005, 300),
+    ->   (1006, 1400.00, '1994-10-01', 1006, 1006, 75),
+    ->   (1007, 750.00, '1994-10-15', 1007, 1007, 225),
+    ->   (1008, 5000.00, '1994-10-12', 1008, 1008, 354)
+    -> ;
+Query OK, 8 rows affected (0.01 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+

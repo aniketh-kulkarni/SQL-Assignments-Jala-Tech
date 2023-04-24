@@ -1,0 +1,18 @@
+1. Display snum, sname, city and comm of all salespeople.
+
+ SELECT snum, sname, city, comm FROM salespeople;
++------+--------+---------------+------+
+| snum | sname  | city          | comm |
++------+--------+---------------+------+
+| 1001 | Peel   | London        | 0.12 |
+| 1002 | Serres | San Francisco | 0.15 |
+| 1003 | Motika | London        | 0.10 |
+| 1004 | Smith  | Paris         | 0.11 |
+| 1005 | Adams  | Athens        | 0.13 |
+| 1006 | Clark  | New York      | 0.14 |
+| 1007 | Blake  | Paris         | 0.13 |
+| 1008 | Jones  | San Francisco | 0.12 |
+| 1009 | James  | London        | 0.10 |
+| 1010 | Burns  | Barcelona     | 0.11 |
++------+--------+---------------+------+
+10 rows in set (0.00 sec)

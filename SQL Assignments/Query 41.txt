@@ -1,0 +1,13 @@
+41. Extract commissions of all salespeople servicing customers in London.
+
+mysql> SELECT salespeople.sname, salespeople.comm
+    -> FROM salespeople
+    -> JOIN customers ON salespeople.snum = customers.cnum
+    -> WHERE customers.city = 'London';
++-------+------+
+| sname | comm |
++-------+------+
+| Peel  | 0.12 |
+| Clark | 0.14 |
++-------+------+
+2 rows in set (0.00 sec)

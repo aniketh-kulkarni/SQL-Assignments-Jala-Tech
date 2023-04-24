@@ -1,0 +1,7 @@
+25. First customer in alphabetical order whose name begins with G.
+
+mysql> SELECT * FROM customers
+    -> WHERE cname LIKE 'G%'
+    -> ORDER BY cname
+    -> LIMIT 1;
+Empty set (0.00 sec)

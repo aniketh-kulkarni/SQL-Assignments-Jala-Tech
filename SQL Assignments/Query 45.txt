@@ -1,0 +1,14 @@
+45. Display the totals of orders for each day and place the results in descending order.
+
+mysql> select odate, count(onum) from orders group by odate order by count(onum);
++------------+-------------+
+| odate      | count(onum) |
++------------+-------------+
+| 1994-10-03 |           1 |
+| 1994-10-04 |           1 |
+| 1994-10-13 |           1 |
+| 1994-10-15 |           1 |
+| 1994-10-01 |           2 |
+| 1994-10-12 |           2 |
++------------+-------------+
+6 rows in set (0.00 sec)

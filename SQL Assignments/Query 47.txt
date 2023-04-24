@@ -1,0 +1,18 @@
+47. Name of all customers matched with the salespeople serving them.
+
+mysql> Select cname, sname from customers, salespeople where customers.cnum = salespeople.snum;
++---------+--------+
+| cname   | sname  |
++---------+--------+
+| Smith   | Peel   |
+| Johnson | Serres |
+| Brown   | Motika |
+| Lee     | Smith  |
+| Clark   | Adams  |
+| Lewis   | Clark  |
+| Martin  | Blake  |
+| Walker  | Jones  |
+| King    | James  |
+| Wright  | Burns  |
++---------+--------+
+10 rows in set (0.00 sec)

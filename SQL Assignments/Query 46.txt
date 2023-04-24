@@ -1,0 +1,22 @@
+46. All combinations of salespeople and customers who shared a city. (ie same city ).
+
+mysql> Select sname, cname from salespeople, customers where salespeople.city = customers.city;
++--------+---------+
+| sname  | cname   |
++--------+---------+
+| James  | Smith   |
+| Motika | Smith   |
+| Peel   | Smith   |
+| Clark  | Johnson |
+| Blake  | Brown   |
+| Smith  | Brown   |
+| Clark  | Clark   |
+| James  | Lewis   |
+| Motika | Lewis   |
+| Peel   | Lewis   |
+| Blake  | Martin  |
+| Smith  | Martin  |
+| Burns  | Walker  |
+| Burns  | Wright  |
++--------+---------+
+14 rows in set (0.00 sec)

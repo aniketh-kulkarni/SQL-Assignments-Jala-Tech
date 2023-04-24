@@ -1,0 +1,5 @@
+15. All customers serviced by Peel or Motika.
+
+mysql> SELECT * FROM customers WHERE Cnum IN (SELECT Cnum FROM salespeople WHERE Cname IN ('Peel', 'Motika'));
+Empty set (0.00 sec)
+

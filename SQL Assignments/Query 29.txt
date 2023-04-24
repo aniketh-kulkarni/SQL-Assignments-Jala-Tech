@@ -1,0 +1,18 @@
+29. List each order number followed by the name of the customer who made the order.
+
+mysql> SELECT orders.onum, customers.cname
+    -> FROM orders
+    -> JOIN customers ON orders.onum = customers.cnum;
++------+---------+
+| onum | cname   |
++------+---------+
+| 1001 | Smith   |
+| 1002 | Johnson |
+| 1003 | Brown   |
+| 1004 | Lee     |
+| 1005 | Clark   |
+| 1006 | Lewis   |
+| 1007 | Martin  |
+| 1008 | Walker  |
++------+---------+
+8 rows in set (0.00 sec)

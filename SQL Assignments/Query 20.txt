@@ -1,0 +1,11 @@
+20. Largest order taken by each salesperson with order value more than $3000.
+
+mysql> SELECT Snum, Odate, MAX(Amt) FROM orders WHERE Amt > 3000 GROUP BY Snum, Odate;
++------+------------+----------+
+| Snum | Odate      | MAX(Amt) |
++------+------------+----------+
+| 1001 | 1994-10-03 |  5000.00 |
+| 1005 | 1994-10-13 |  3200.00 |
+| 1008 | 1994-10-12 |  5000.00 |
++------+------------+----------+
+3 rows in set (0.00 sec)

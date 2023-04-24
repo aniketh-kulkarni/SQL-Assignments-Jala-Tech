@@ -1,0 +1,4 @@
+42. Find all customers whose cnum is 1000 above the snum of series.
+
+mysql> Select cnum, cname from customers where cnum > ( select snum+1000  from salespeople where sname = 'Serres');
+Empty set (0.00 sec)

@@ -1,0 +1,11 @@
+3. Display names and commissions of all salespeople in london.
+
+mysql> SELECT sname, comm FROM salespeople WHERE city = 'London';
++--------+------+
+| sname  | comm |
++--------+------+
+| Peel   | 0.12 |
+| Motika | 0.10 |
+| James  | 0.10 |
++--------+------+
+3 rows in set (0.00 sec)

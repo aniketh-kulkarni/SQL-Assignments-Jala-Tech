@@ -1,0 +1,9 @@
+18. Count the number of salespeople currently listing orders in the order table.
+
+mysql> SELECT COUNT(DISTINCT snum) FROM orders;
++----------------------+
+| COUNT(DISTINCT snum) |
++----------------------+
+|                    8 |
++----------------------+
+1 row in set (0.00 sec)

@@ -1,0 +1,9 @@
+23. Count the number of different non NULL city values in customers table.
+
+mysql> Select count(distinct city) from Customers;
++----------------------+
+| count(distinct city) |
++----------------------+
+|                    6 |
++----------------------+
+1 row in set (0.00 sec)

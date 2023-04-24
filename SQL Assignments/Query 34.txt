@@ -1,0 +1,15 @@
+34. Produce all pairs of salespeople which are living in the same city. Exclude combinations of salespeople with themselves as well as duplicates with the order reversed.
+
+mysql> SELECT s1.sname AS salesperson1, s2.sname AS salesperson2, s1.city AS city
+    -> FROM salespeople s1
+    -> JOIN salespeople s2 ON s1.city = s2.city AND s1.snum < s2.snum;
++--------------+--------------+---------------+
+| salesperson1 | salesperson2 | city          |
++--------------+--------------+---------------+
+| Peel         | Motika       | London        |
+| Peel         | James        | London        |
+| Serres       | Jones        | San Francisco |
+| Motika       | James        | London        |
+| Smith        | Blake        | Paris         |
++--------------+--------------+---------------+
+5 rows in set (0.00 sec)

@@ -1,0 +1,18 @@
+32. Calculate the amount of the salesperson’s commission on each order with a rating above 100.
+
+mysql> SELECT orders.onum, orders.amt * salespeople.comm / 100 AS commission
+    -> FROM orders
+    -> JOIN salespeople ON orders.snum = salespeople.snum
+    -> JOIN customers ON orders.cnum = customers.cnum
+    -> WHERE customers.rating > 100;
++------+------------+
+| onum | commission |
++------+------------+
+| 1001 | 6.00000000 |
+| 1002 | 3.75000000 |
+| 1004 | 2.20000000 |
+| 1005 | 4.16000000 |
+| 1007 | 0.97500000 |
+| 1008 | 6.00000000 |
++------+------------+
+6 rows in set (0.00 sec)

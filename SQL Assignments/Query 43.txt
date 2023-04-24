@@ -1,0 +1,10 @@
+43. Count the customers with rating above San Jose’s average.
+
+mysql> Select cnum, rating from customers where rating > ( select avg(rating)  from customers where city = 'San Jose');
++------+--------+
+| cnum | rating |
++------+--------+
+| 1005 |    300 |
+| 1010 |    300 |
++------+--------+
+2 rows in set (0.00 sec)

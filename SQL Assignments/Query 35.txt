@@ -1,0 +1,7 @@
+35. Produce names and cities of all customers with the same rating as Hoffman.
+
+mysql> SELECT customers.cname, customers.city
+    -> FROM customers
+    -> JOIN customers hoffman ON customers.rating = hoffman.rating AND hoffman.cname = 'Hoffman';
+Empty set (0.00 sec)
+

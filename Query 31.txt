@@ -1,0 +1,18 @@
+31. Produce all customer serviced by salespeople with a commission above 12%.
+
+mysql> SELECT customers.*
+    -> FROM orders
+    -> JOIN customers ON orders.onum = customers.cnum;
++------+---------+-----------+--------+
+| Cnum | Cname   | City      | Rating |
++------+---------+-----------+--------+
+| 1001 | Smith   | London    |    150 |
+| 1002 | Johnson | New York  |    200 |
+| 1003 | Brown   | Paris     |    100 |
+| 1004 | Lee     | San Jose  |    250 |
+| 1005 | Clark   | New York  |    300 |
+| 1006 | Lewis   | London    |     75 |
+| 1007 | Martin  | Paris     |    225 |
+| 1008 | Walker  | Barcelona |    175 |
++------+---------+-----------+--------+
+8 rows in set (0.00 sec)

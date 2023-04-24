@@ -1,0 +1,16 @@
+24. Select each customer’s smallest order.
+
+mysql> Select cnum, min(amt) from orders group by cnum;
++------+----------+
+| cnum | min(amt) |
++------+----------+
+| 1001 |  5000.00 |
+| 1002 |  2500.00 |
+| 1003 |  1000.00 |
+| 1004 |  2000.00 |
+| 1005 |  3200.00 |
+| 1006 |  1400.00 |
+| 1007 |   750.00 |
+| 1008 |  5000.00 |
++------+----------+
+8 rows in set (0.00 sec)

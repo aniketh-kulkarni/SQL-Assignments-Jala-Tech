@@ -1,0 +1,7 @@
+37. All orders credited to the same salesperson who services Hoffman.
+
+mysql> SELECT orders.*
+    -> FROM orders
+    -> JOIN customers ON orders.snum = customers.cnum
+    -> WHERE customers.cname = 'Hoffman';
+Empty set (0.00 sec)

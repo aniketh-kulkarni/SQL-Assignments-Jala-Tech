@@ -1,0 +1,16 @@
+2. Display all snum without duplicates from all orders.
+
+mysql> SELECT DISTINCT snum FROM orders;
++------+
+| snum |
++------+
+| 1001 |
+| 1002 |
+| 1003 |
+| 1004 |
+| 1005 |
+| 1006 |
+| 1007 |
+| 1008 |
++------+
+8 rows in set (0.00 sec)

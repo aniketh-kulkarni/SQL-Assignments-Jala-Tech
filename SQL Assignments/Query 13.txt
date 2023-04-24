@@ -1,0 +1,4 @@
+13. All customers with NULL values in city column.
+
+mysql> SELECT * FROM customers WHERE city IS NULL;
+Empty set (0.00 sec)

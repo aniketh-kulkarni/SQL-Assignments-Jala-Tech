@@ -1,0 +1,9 @@
+16. All customers whose names begin with a letter from A to B.
+
+mysql> SELECT * FROM customers WHERE cname LIKE 'A%' OR cname LIKE 'B%';
++------+-------+-------+--------+
+| Cnum | Cname | City  | Rating |
++------+-------+-------+--------+
+| 1003 | Brown | Paris |    100 |
++------+-------+-------+--------+
+1 row in set (0.00 sec)

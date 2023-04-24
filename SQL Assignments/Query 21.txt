@@ -1,0 +1,10 @@
+21. Which day had the hightest total amount ordered.
+
+mysql> Select odate, amt, snum, cnum from orders where amt = (select max(amt)  from orders);
++------------+---------+------+------+
+| odate      | amt     | snum | cnum |
++------------+---------+------+------+
+| 1994-10-03 | 5000.00 | 1001 | 1001 |
+| 1994-10-12 | 5000.00 | 1008 | 1008 |
++------------+---------+------+------+
+

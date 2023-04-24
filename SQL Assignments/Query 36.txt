@@ -1,0 +1,7 @@
+36. Extract all the orders of Motika.
+
+mysql> SELECT orders.*
+    -> FROM orders
+    -> JOIN customers ON orders.cnum = customers.cnum
+    -> WHERE customers.cname = 'Motika';
+Empty set (0.00 sec)

@@ -1,0 +1,14 @@
+40. Find all orders attributed to salespeople servicing customers in london.
+
+mysql> SELECT orders.*
+    -> FROM orders
+    -> JOIN salespeople ON orders.snum = salespeople.snum
+    -> JOIN customers ON orders.cnum = customers.cnum
+    -> WHERE customers.city = 'London';
++------+---------+------------+------+------+--------+
+| Onum | Amt     | Odate      | Cnum | Snum | Rating |
++------+---------+------------+------+------+--------+
+| 1001 | 5000.00 | 1994-10-03 | 1001 | 1001 |    150 |
+| 1006 | 1400.00 | 1994-10-01 | 1006 | 1006 |     75 |
++------+---------+------------+------+------+--------+
+2 rows in set (0.00 sec)

@@ -1,0 +1,10 @@
+38. All orders that are greater than the average for Oct 4.
+
+mysql> SELECT orders.*
+    ->   FROM orders
+    -> WHERE orders.amt > (
+    -> SELECT AVG(amt)
+    -> FROM orders
+    -> WHERE DATE(Odate) = '2023-10-04'
+    -> );
+Empty set (0.00 sec)

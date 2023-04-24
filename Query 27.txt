@@ -1,0 +1,16 @@
+27. Find highest rating in each city. Put the output in this form. For the city (city), the highest rating is : (rating).
+
+mysql> SELECT CONCAT('For the city ', city, ', the highest rating is: ', MAX(rating)) AS output
+    -> FROM customers
+    -> GROUP BY city;
++----------------------------------------------------+
+| output                                             |
++----------------------------------------------------+
+| For the city London, the highest rating is: 150    |
+| For the city New York, the highest rating is: 300  |
+| For the city Paris, the highest rating is: 225     |
+| For the city San Jose, the highest rating is: 250  |
+| For the city Barcelona, the highest rating is: 300 |
+| For the city Rome, the highest rating is: 50       |
++----------------------------------------------------+
+6 rows in set (0.00 sec)

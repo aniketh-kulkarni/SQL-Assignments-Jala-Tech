@@ -1,0 +1,16 @@
+44. Assume that each salesperson has a 12% commission. Produce order no., salesperson no., and amount of salesperson’s commission for that order.
+
+mysql> Select onum, snum, amt, amt * 0.12 from orders order by snum;
++------+------+---------+------------+
+| onum | snum | amt     | amt * 0.12 |
++------+------+---------+------------+
+| 1001 | 1001 | 5000.00 |   600.0000 |
+| 1002 | 1002 | 2500.00 |   300.0000 |
+| 1003 | 1003 | 1000.00 |   120.0000 |
+| 1004 | 1004 | 2000.00 |   240.0000 |
+| 1005 | 1005 | 3200.00 |   384.0000 |
+| 1006 | 1006 | 1400.00 |   168.0000 |
+| 1007 | 1007 |  750.00 |    90.0000 |
+| 1008 | 1008 | 5000.00 |   600.0000 |
++------+------+---------+------------+
+8 rows in set (0.00 sec)

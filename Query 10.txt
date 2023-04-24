@@ -1,0 +1,16 @@
+10. All customers excluding those with rating <= 100 unless they are located in Rome.
+
+mysql> SELECT * FROM customers WHERE city = 'Rome' OR rating > 100;
++------+---------+-----------+--------+
+| Cnum | Cname   | City      | Rating |
++------+---------+-----------+--------+
+| 1001 | Smith   | London    |    150 |
+| 1002 | Johnson | New York  |    200 |
+| 1004 | Lee     | San Jose  |    250 |
+| 1005 | Clark   | New York  |    300 |
+| 1007 | Martin  | Paris     |    225 |
+| 1008 | Walker  | Barcelona |    175 |
+| 1009 | King    | Rome      |     50 |
+| 1010 | Wright  | Barcelona |    300 |
++------+---------+-----------+--------+
+8 rows in set (0.00 sec)

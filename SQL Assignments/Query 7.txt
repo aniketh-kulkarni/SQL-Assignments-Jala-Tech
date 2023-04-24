@@ -1,0 +1,9 @@
+7. All customers who were either located in San Jose or had a rating above 200.
+
+mysql> SELECT * FROM customers WHERE city = 'San Jose' AND rating > 200;
++------+-------+----------+--------+
+| Cnum | Cname | City     | Rating |
++------+-------+----------+--------+
+| 1004 | Lee   | San Jose |    250 |
++------+-------+----------+--------+
+1 row in set (0.00 sec)

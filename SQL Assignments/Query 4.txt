@@ -1,0 +1,9 @@
+4. All customers with rating of 100.
+
+mysql> SELECT * FROM customers WHERE rating = 100;
++------+-------+-------+--------+
+| Cnum | Cname | City  | Rating |
++------+-------+-------+--------+
+| 1003 | Brown | Paris |    100 |
++------+-------+-------+--------+
+1 row in set (0.00 sec)

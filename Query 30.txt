@@ -1,0 +1,19 @@
+30. Names of salesperson and customer for each order after the order number.
+
+mysql> SELECT orders.onum, salespeople.sname, customers.cname
+    -> FROM orders
+    -> JOIN salespeople ON orders.snum = salespeople.snum
+    -> JOIN customers ON orders.cnum = customers.cnum;
++------+--------+---------+
+| onum | sname  | cname   |
++------+--------+---------+
+| 1001 | Peel   | Smith   |
+| 1002 | Serres | Johnson |
+| 1003 | Motika | Brown   |
+| 1004 | Smith  | Lee     |
+| 1005 | Adams  | Clark   |
+| 1006 | Clark  | Lewis   |
+| 1007 | Blake  | Martin  |
+| 1008 | Jones  | Walker  |
++------+--------+---------+
+8 rows in set (0.00 sec)

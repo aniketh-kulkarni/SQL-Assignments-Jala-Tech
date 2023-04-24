@@ -1,0 +1,19 @@
+26. Assume that each salesperson has a 12% commission. Produce order no., salesperson no., and amount of salesperson’s commission for that order.
+
+
+mysql> SELECT orders.onum, orders.snum, orders.amt * 0.12 AS commission
+    -> FROM orders
+    -> JOIN salespeople ON orders.snum = salespeople.snum;
++------+------+------------+
+| onum | snum | commission |
++------+------+------------+
+| 1001 | 1001 |   600.0000 |
+| 1002 | 1002 |   300.0000 |
+| 1003 | 1003 |   120.0000 |
+| 1004 | 1004 |   240.0000 |
+| 1005 | 1005 |   384.0000 |
+| 1006 | 1006 |   168.0000 |
+| 1007 | 1007 |    90.0000 |
+| 1008 | 1008 |   600.0000 |
++------+------+------------+
+8 rows in set (0.00 sec)

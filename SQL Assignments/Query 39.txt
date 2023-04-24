@@ -1,0 +1,11 @@
+39. Find average commission of salespeople in london.
+
+mysql> SELECT AVG(comm) AS average_commission
+    -> FROM salespeople
+    -> WHERE city = 'London';
++--------------------+
+| average_commission |
++--------------------+
+|           0.106667 |
++--------------------+
+1 row in set (0.00 sec)
